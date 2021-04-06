@@ -130,8 +130,8 @@ public class ClickHourceService {
         try {
             Connection connection = clickHourceDataSource.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            for (int i = 0; i < params.size(); i++) {
-                preparedStatement.setObject(i + 1, params.get(i));
+            for (int i = 1; i <= params.size(); i++) {
+                preparedStatement.setObject(i , params.get(i));
             }
             ResultSet resultSet = preparedStatement.executeQuery();
             ResultSetMetaData metaData = resultSet.getMetaData();
