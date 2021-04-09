@@ -1,7 +1,9 @@
 package com.example.demo.model;
 
 import com.example.demo.annotation.ColumnName;
+import com.example.demo.annotation.Table;
 
+@Table(value = "sre_reporting_hourly_stats",database = "facebook")
 public class AggressResult extends BaseResult{
 	@ColumnName("ad_name")
 	private String adName;
